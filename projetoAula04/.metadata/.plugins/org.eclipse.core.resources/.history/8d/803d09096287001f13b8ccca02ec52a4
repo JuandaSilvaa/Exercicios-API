@@ -1,0 +1,12 @@
+package br.org.serratec.h2banco.domain;
+
+import java.time.LocalDate;
+
+public class Manutencao {
+
+	private Long id;
+	
+	private LocalDate dataEntrada;
+	
+	private String obs;
+}

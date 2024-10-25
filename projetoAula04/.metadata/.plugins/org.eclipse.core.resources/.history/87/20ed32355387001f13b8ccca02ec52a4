@@ -1,0 +1,12 @@
+package br.org.serratec.h2banco.domain;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+
+@Entity
+public class Proprietario {
+
+	@Id
+	@GeneratedValue
+	private Long id;
+}

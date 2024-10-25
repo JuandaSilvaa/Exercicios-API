@@ -1,0 +1,8 @@
+package br.org.serratec.h2banco.domain;
+
+
+
+@Entity
+public class Proprietario {
+
+}

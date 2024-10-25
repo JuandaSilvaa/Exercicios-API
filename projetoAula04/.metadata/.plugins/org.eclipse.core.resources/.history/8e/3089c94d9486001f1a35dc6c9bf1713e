@@ -1,0 +1,7 @@
+package br.org.serratec.h2banco.exception;
+
+public class ErroResposta {
+
+		private  Integer status;
+		private String
+}

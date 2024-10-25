@@ -1,0 +1,6 @@
+package br.org.serratec.h2banco.domain;
+
+@
+public class PessoaFisica {
+
+}

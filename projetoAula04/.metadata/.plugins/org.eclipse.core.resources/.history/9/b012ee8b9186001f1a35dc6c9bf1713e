@@ -1,0 +1,5 @@
+package br.org.serratec.h2banco.repository;
+
+public interface VeiculoRepository {
+
+}

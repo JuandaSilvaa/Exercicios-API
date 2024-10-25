@@ -1,0 +1,5 @@
+package br.org.serratec.h2banco.Controller;
+
+public class ProprietarioController {
+
+}

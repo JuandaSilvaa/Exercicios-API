@@ -1,0 +1,27 @@
+package br.org.serratec.h2banco.exception;
+
+@ControllerAdvice
+public class ControllerExceptionHandler extends ResponseEntityExceptionHandler {
+
+	@Override
+	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+			HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+		List<String> erros = new ArrayList<>();
+		for (FieldError e : ex.getBindingResult().getFieldErrors()) {
+			erros.add(e.getField() + " : " + e.getDefaultMessage());
+
+		}
+
+		ErroResposta erroResposta = new ErroResposta(status.value(), "Existem campos invalidos", LocalDateTime.now(),
+				erros);
+
+		return super.handleExceptionInternal(ex, erroResposta, headers, status, request);
+	}
+	
+	@Override
+	protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
+			HttpHeaders headers, HttpStatusCode status, WebRequest request) {
+		return ResponseEntity.badRequest().body(ex.getMessage());
+				
+	}
+}
